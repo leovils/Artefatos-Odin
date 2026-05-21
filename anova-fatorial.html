@@ -487,8 +487,8 @@ ${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','E a resposta pode ser
   </tbody>
 </table>
 
-${dlg('corvo','&#128038; Muninn sussurra:','A m&eacute;dia geral &eacute; <strong>${round2(GM)}</strong>. As m&eacute;dias marginais &mdash; de linha e coluna &mdash; s&atilde;o as m&eacute;dias que ignoram o outro fator.')}
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Perceba: A&ccedil;o R&uacute;nico (${round2(rowMean['Aço'])}) supera Ferro N&oacute;rdico (${round2(rowMean['Ferro'])}) por ${round2(rowMean['Aço']-rowMean['Ferro'])} pontos. E &Oacute;leo (${round2(colMean['Óleo'])}) lidera entre as t&eacute;cnicas. Mas ser&aacute; que essa hist&oacute;ria &eacute; t&atilde;o simples?')}
+${dlg('corvo','&#128038; Muninn sussurra:',`A m&eacute;dia geral &eacute; <strong>${round2(GM)}</strong>. As m&eacute;dias marginais &mdash; de linha e coluna &mdash; s&atilde;o as m&eacute;dias que ignoram o outro fator.`)}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`Perceba: A&ccedil;o R&uacute;nico (${round2(rowMean['Aço'])}) supera Ferro N&oacute;rdico (${round2(rowMean['Ferro'])}) por ${round2(rowMean['Aço']-rowMean['Ferro'])} pontos. E &Oacute;leo (${round2(colMean['Óleo'])}) lidera entre as t&eacute;cnicas. Mas ser&aacute; que essa hist&oacute;ria &eacute; t&atilde;o simples?`)}
 `;
 
   // ---- STEP 4: SST ----
@@ -537,7 +537,7 @@ ${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Essa &eacute; a varia
 
 <div id="ssABars" class="bar-container"></div>
 
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','O efeito principal de A ignora completamente as t&eacute;cnicas &mdash; olha s&oacute; para os metais. Ferro ${round2(rowMean['Ferro'])} vs. A&ccedil;o ${round2(rowMean['Aço'])} &mdash; uma diferen&ccedil;a bruta de ${round2(rowMean['Aço']-rowMean['Ferro'])} pontos!')}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`O efeito principal de A ignora completamente as t&eacute;cnicas &mdash; olha s&oacute; para os metais. Ferro ${round2(rowMean['Ferro'])} vs. A&ccedil;o ${round2(rowMean['Aço'])} &mdash; uma diferen&ccedil;a bruta de ${round2(rowMean['Aço']-rowMean['Ferro'])} pontos!`)}
 `;
 
   // ---- STEP 6: SS_B ----
@@ -562,7 +562,7 @@ ${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','O efeito principal de
 
 <div id="ssBBars" class="bar-container"></div>
 
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','&Oacute;leo (${round2(colMean['Óleo'])}) lidera, seguido de &Aacute;gua (${round2(colMean['Água'])}) e Neve (${round2(colMean['Neve'])}). Mas lembre: isso ignora o tipo de metal.')}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`&Oacute;leo (${round2(colMean['Óleo'])}) lidera, seguido de &Aacute;gua (${round2(colMean['Água'])}) e Neve (${round2(colMean['Neve'])}). Mas lembre: isso ignora o tipo de metal.`)}
 `;
 
   // ---- STEP 7: SS_AB ----
@@ -604,7 +604,7 @@ ${metals.map(m => techs.map(t => {
   SS<sub>AB</sub> = <span class="highlight">${round2(SS_AB)}</span>
 </div>
 
-${dlg('corvo','&#128038; Huginn provoca:','Compare: SS<sub>A</sub> = ${round2(SS_A)} &eacute; ENORME, SS<sub>B</sub> = ${round2(SS_B)} &eacute; grande, SS<sub>AB</sub> = ${round2(SS_AB)} &eacute; pequeno. Ser&aacute; que a intera&ccedil;&atilde;o ser&aacute; significativa? Depende do erro!')}
+${dlg('corvo','&#128038; Huginn provoca:',`Compare: SS<sub>A</sub> = ${round2(SS_A)} &eacute; ENORME, SS<sub>B</sub> = ${round2(SS_B)} &eacute; grande, SS<sub>AB</sub> = ${round2(SS_AB)} &eacute; pequeno. Ser&aacute; que a intera&ccedil;&atilde;o ser&aacute; significativa? Depende do erro!`)}
 `;
 
   // ---- STEP 8: SS_Error ----
@@ -649,7 +649,7 @@ ${metals.map(m => techs.map(t => {
   ${round2(SS_A)} + ${round2(SS_B)} + ${round2(SS_AB)} + ${round2(SS_Error)} = <span class="highlight">${round2(SS_A+SS_B+SS_AB+SS_Error)}</span> = SS<sub>T</sub> &#10003;
 </div>
 
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Decomposi&ccedil;&atilde;o perfeita! O efeito do metal (SS<sub>A</sub>) domina &mdash; explica ${(SS_A/SST*100).toFixed(1)}% da variabilidade total.')}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`Decomposi&ccedil;&atilde;o perfeita! O efeito do metal (SS<sub>A</sub>) domina &mdash; explica ${(SS_A/SST*100).toFixed(1)}% da variabilidade total.`)}
 `;
 
   // ---- STEP 9: DF ----
@@ -705,7 +705,7 @@ ${dlg('corvo','&#128038; Muninn sussurra:','Os graus de liberdade do <strong>err
   </tbody>
 </table>
 
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Os tr&ecirc;s efeitos s&atilde;o significativos! O metal (F = ${round2(F_A)}) domina, a t&eacute;cnica (F = ${round2(F_B)}) &eacute; forte, e a intera&ccedil;&atilde;o (F = ${round2(F_AB)}) tamb&eacute;m ultrapassa o cr&iacute;tico de ${Fcrit_2_18}.')}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`Os tr&ecirc;s efeitos s&atilde;o significativos! O metal (F = ${round2(F_A)}) domina, a t&eacute;cnica (F = ${round2(F_B)}) &eacute; forte, e a intera&ccedil;&atilde;o (F = ${round2(F_AB)}) tamb&eacute;m ultrapassa o cr&iacute;tico de ${Fcrit_2_18}.`)}
 ${dlg('thor','&#9889; ThorMento','A intera&ccedil;&atilde;o mal passou! N&atilde;o importa!')}
 ${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Importa sim, ThorMento. Significa que a superioridade do A&ccedil;o <em>varia</em> conforme a t&eacute;cnica. N&atilde;o &eacute; constante.')}
 
@@ -751,7 +751,7 @@ ${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Importa sim, ThorMent
   </tbody>
 </table>
 
-${dlg('corvo','&#128038; Muninn sussurra:','O &eta;&sup2; parcial indica a propor&ccedil;&atilde;o da vari&acirc;ncia explicada por cada fator <strong>relativa ao erro</strong>. Metal explica ${(eta_A*100).toFixed(1)}% &mdash; efeito massivo!')}
+${dlg('corvo','&#128038; Muninn sussurra:',`O &eta;&sup2; parcial indica a propor&ccedil;&atilde;o da vari&acirc;ncia explicada por cada fator <strong>relativa ao erro</strong>. Metal explica ${(eta_A*100).toFixed(1)}% &mdash; efeito massivo!`)}
 
 <div class="step-subtitle">Interpreta&ccedil;&atilde;o dos Tamanhos de Efeito (&eta;&sup2;<sub>p</sub>)</div>
 <table class="data-table" style="max-width:400px;margin:10px auto;">
@@ -824,7 +824,7 @@ ${simpleEffects.map(se => `
   </tbody>
 </table>
 
-${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho','Perceba: a diferen&ccedil;a entre metais &eacute; de ${round2(simpleEffects[0].diff)} na &Aacute;gua, ${round2(simpleEffects[1].diff)} no &Oacute;leo, mas pula para <strong>${round2(simpleEffects[2].diff)}</strong> na Neve! O A&ccedil;o R&uacute;nico brilha especialmente com Neve de Jotunheim.')}
+${dlg('odin','&#129497;&#8205;&#9794;&#65039; Odin Dinho',`Perceba: a diferen&ccedil;a entre metais &eacute; de ${round2(simpleEffects[0].diff)} na &Aacute;gua, ${round2(simpleEffects[1].diff)} no &Oacute;leo, mas pula para <strong>${round2(simpleEffects[2].diff)}</strong> na Neve! O A&ccedil;o R&uacute;nico brilha especialmente com Neve de Jotunheim.`)}
 ${dlg('corvo','&#128038; Huginn provoca:','Todos os efeitos simples s&atilde;o significativos &mdash; A&ccedil;o sempre supera Ferro. Mas a <em>magnitude</em> muda. ESSA &eacute; a intera&ccedil;&atilde;o em a&ccedil;&atilde;o.')}
 `;
   }
